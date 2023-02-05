@@ -209,7 +209,6 @@ console.log(book.releaseYear); */
 
 
 
-
 let obj = {name: "Alek"};
 const obj2 = obj;
 
