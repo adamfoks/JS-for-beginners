@@ -209,7 +209,7 @@ console.log(book.releaseYear); */
 
 
 
-let obj = {name: "Alek"};
+/* let obj = {name: "Alek"};
 const obj2 = obj;
 
 console.log(obj.name);
@@ -221,6 +221,117 @@ console.log(obj3);
 obj = {size: "S"};
 console.log(obj.name);
 console.log(obj.size);
-console.log(obj2.name);
+console.log(obj2.name); */
 
 
+
+// Ćwiczenie konto bankowe
+/* function makeBankAccount() {
+    return {
+        balance: 0,
+        deposit: function (amount) {
+            this.balance += amount;
+            return this.balance;
+        },
+        withdraw: function (amount) {
+            if (amount > this.balance) {
+                amount = this.balance
+            }
+            this.balance -= amount;
+            return amount;
+        },
+        currentBalance: function () {
+            return this.balance;
+        }
+    }
+}
+const account = makeBankAccount();
+console.log(account.currentBalance());
+
+const balance = account.deposit(1000);
+console.log(balance);
+console.log(account.currentBalance());
+
+const withdrawed1 = account.withdraw(300);
+console.log(withdrawed1);
+console.log(account.currentBalance());
+
+const withdrawed2 = account.withdraw(1500);
+console.log(withdrawed2);
+console.log(account.currentBalance()); */
+
+
+
+
+// Ćwiczenie konto bankowe z operatorem new
+/* function BankAccount() {
+    this.balance = 0;
+    this.deposit = function (amount) {
+        this.balance += amount;
+        return this.balance;
+    };
+    this.withdraw = function (amount) {
+        amount = Math.min(amount, this.balance);
+        this.balance -= amount;
+        return amount;
+    };
+    this.currentBalance = function() {
+        return this.balance;
+    };
+};
+
+const account = new BankAccount();
+console.log(account.currentBalance());
+
+const balance = account.deposit(1000);
+console.log(balance);
+console.log(account.currentBalance());
+
+const withdrawed1 = account.withdraw(300);
+console.log(withdrawed1);
+console.log(account.currentBalance());
+
+const withdrawed2 = account.withdraw(1500);
+console.log(withdrawed2);
+console.log(account.currentBalance()); */
+
+
+
+
+
+// Ćwiczenie konto bankowe przez definicję klasy
+class BankAccount {
+    constructor() {
+        this.balance = 0;
+    }
+
+    deposit(amount) {
+        this.balance += amount;
+        return this.balance;
+    }
+
+    withdraw(amount) {
+        amount = Math.min(amount, this.balance);
+        this.balance -= amount;
+        return amount;
+    }
+    
+    currentBalance() {
+        return this.balance;
+    }
+};
+
+const account = new BankAccount();
+console.log(account.currentBalance());
+
+const balance = account.deposit(1000);
+console.log(balance);
+console.log(account.currentBalance());
+
+const withdrawed1 = account.withdraw(300);
+console.log(withdrawed1);
+console.log(account.currentBalance());
+
+const withdrawed2 = account.withdraw(1500);
+console.log(withdrawed2);
+console.log(account.currentBalance());
