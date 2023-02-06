@@ -300,7 +300,7 @@ console.log(account.currentBalance()); */
 
 
 // Ćwiczenie konto bankowe przez definicję klasy
-class BankAccount {
+/* class BankAccount {
     constructor() {
         this.balance = 0;
     }
@@ -334,4 +334,13 @@ console.log(account.currentBalance());
 
 const withdrawed2 = account.withdraw(1500);
 console.log(withdrawed2);
-console.log(account.currentBalance());
+console.log(account.currentBalance()); */
+
+
+
+
+//TABLICE
+const letters = ["A", "B", "C", "D", "E", "F"];
+console.log(letters.length);
+console.log(letters["4"]);
+
