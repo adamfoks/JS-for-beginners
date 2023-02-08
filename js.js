@@ -340,7 +340,160 @@ console.log(account.currentBalance()); */
 
 
 //TABLICE
-const letters = ["A", "B", "C", "D", "E", "F"];
+/* const letters = ["A", "B", "C", "D", "E", "F"];
 console.log(letters.length);
-console.log(letters["4"]);
+console.log(letters["4"]); */
 
+
+
+//forEach
+/* function printAllValues(values) {
+    values.forEach(function (value, index) {
+        console.log("Na pozycji " + index + ' znajduje się "' + value + '"');
+    });
+}
+
+function sumAll(numbers) {
+    let sum = 0;
+    numbers.forEach(function (number) {
+        sum += number;
+    });
+    return sum;
+}
+
+printAllValues([3]);
+console.log(sumAll([1, 2, 5])); */
+
+
+
+
+//zmiana na wielkie litery.
+/* const shoppingList = ["Jabłko", "Banan", "Śliwka"]; 
+
+
+const upper = []; 
+shoppingList.forEach(function (item) {
+  upper.push(item.toUpperCase());
+});
+console.log(upper); // [ 'JABŁKO', 'BANAN', 'ŚLIWKA' ] */
+
+
+
+
+//mnożenie liczb do kwadratu. 
+/* const numbers = [1, 2, 3, 4];
+const numberSquares = [];
+numbers.forEach(function (item) {
+    numberSquares.push(item * item);
+});
+console.log(numberSquares); */
+
+
+//funkca map dwóch powyzszych przykładów
+/* const shoppingList = ["Jabłko", "Banan", "Śliwka"];
+const numbers = [1, 2, 3, 4];
+const upper = shoppingList.map(function(item) { 
+    return item.toUpperCase();
+});
+console.log(upper); // [ 'JABŁKO', 'BANAN', 'ŚLIWKA' ]
+
+const numberSquares = numbers.map(function(item) { 
+    return item * item;
+});
+console.log(numberSquares); // [ 1, 4, 9, 16 ] */
+
+
+
+//wypisuje imie, drugie, imie i nazwisko uzytkownika
+/* const users = [
+    {
+        firstName: "Turanga",
+        lastName: "Leela"
+    },
+    {
+        firstName: "Amy",
+        lastName: "Wong"
+    },
+    {
+        firstName: "Philip",
+        secondName: "Jay",
+        lastName: "Fry"
+    }, {
+        firstName: "Bender",
+        secondName: "Bending",
+        lastName: "Rodríguez"
+    },];
+
+
+function toFullNames(users) {
+    return users.map(function (user) {
+        if (user.secondName) {
+            return user.firstName + " " + user.secondName + " " + user.lastName;
+        } else {
+            return user.firstName + " " + user.lastName;
+        }
+    });
+};
+
+const fullNames = toFullNames(users);
+fullNames.forEach(function (name) {
+    console.log(name);
+}); */
+
+
+
+
+//FUNKCJE STRZAŁKOWE
+/* const shoppingList = ["Jabłko", "Banan", "Śliwka"];
+const numbers = [1, 2, 3, 4];
+let text = "";
+shoppingList.forEach(item => text += item + ", ");
+console.log(text); // Jabłko, Banan, Śliwka,
+
+const upper = shoppingList
+    .map(item => item.toUpperCase());
+
+console.log(upper); // [ 'JABŁKO', 'BANAN', 'ŚLIWKA' ] 
+
+const numberSquares = numbers.map(num => num * num);
+console.log(numberSquares); // [ 1, 4, 9, 16 ] */
+
+
+
+
+
+/* const students = [
+    { name: "Marian", score: 4.51, points: 19 },
+    { name: "Ania", score: 4.23, points: 21 },
+    { name: "Ala", score: 3.21, points: 21 },
+    { name: "Katarzyna", score: 3.77, points: 32 },
+    { name: "Józef", score: 4.21, points: 22 },
+    { name: "Rafał", score: 3.43, points: 23 },
+];
+
+const list = students
+    .filter(s => s.score >= 3.5)
+    .filter(s => s.points >= 20)
+    .map(s => s.name + ", " + s.score)
+    .forEach(str => console.log(str)); */
+
+
+
+
+//powyzsze mozna skrocic
+const students = [
+    { name: "Marian", score: 4.51, points: 19 },
+    { name: "Ania", score: 4.23, points: 21 },
+    { name: "Ala", score: 3.21, points: 21 },
+    { name: "Katarzyna", score: 3.77, points: 32 },
+    { name: "Józef", score: 4.21, points: 22 },
+    { name: "Rafał", score: 3.43, points: 23 },
+];
+
+const list = students
+.filter(s => s.score >= 3.5 && s.points >= 20) 
+.forEach(s => console.log(s.name + ", " + s.score));
+
+
+
+const times = (a, b) => a * b;  
