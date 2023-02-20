@@ -15,4 +15,3 @@ switch (animal) {
     default:
         console.log("Jakiś dziwny ten zwierzak");
 }
-}
