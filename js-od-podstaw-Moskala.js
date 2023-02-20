@@ -1,3 +1,7 @@
+
+//from Java script od podstaw Marcin Moskała
+
+
 // wypisuje sumę dwóch liczb przekazywanych jako argumenty np 5 i 4:
 
 /*   function printSum(a, b) {
