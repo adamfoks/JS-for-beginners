@@ -1,17 +1,16 @@
 // Trainning: http://kursjs.pl/
 
-const animal = prompt("Wpisz jakiego masz zwierzaka");
+let str = "";
 
-switch (animal) {
-    case "pies":
-        console.log("Psy są najlepsze");
-        break;
-    case "kot":
-        console.log("Koty są lepsze od psów");
-        break;
-    case "chomik":
-        console.log("Każdy chomik jest super");
-        break;
-    default:
-        console.log("Jakiś dziwny ten zwierzak");
+for (let i=0; i<4; i++) {
+    for (let j=0; j<6; j++) {
+        if (i===0 || i===3 || j===0 || j===5) {
+            str += "*";
+        } else {
+            str += "-";
+        }
+    }
+    str += "\n";
 }
+
+console.log(str);
