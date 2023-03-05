@@ -1,16 +1,9 @@
 // Trainning: http://kursjs.pl/
 
-function getStatus(number) {
-    if (number < 20) {
-        return "bad"
-    }
-
-    if (number < 30) {
-        return "medium"
-    }
-
-    return "good"
+const myF = (a, b) => {
+    const result = a * b;
+    console.log( "Wynik mnożenia to", result );
+    return result;
 }
 
-console.log(getStatus(10));
-console.log(getStatus(25));
+myF(2, 5)
